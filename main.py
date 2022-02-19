@@ -18,4 +18,5 @@ jnr = PlayerCharacter('Junior')
 dan = PlayerCharacter('Daniel Edem', 24)
 
 if __name__ == '__main__':
+    dan.techie = False
     print(dan.techie)
