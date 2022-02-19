@@ -12,11 +12,13 @@ class PlayerCharacter:
     def run(self):
         print("Player:", self.name, "is running!")
 
+    def speak(self):
+        print(f"My name is {self.name} and i am {self.age} year(s) old...")
+
 
 obj1 = BigObject()
 jnr = PlayerCharacter('Junior')
 dan = PlayerCharacter('Daniel Edem', 24)
 
 if __name__ == '__main__':
-    dan.techie = False
-    print(dan.techie)
+    dan.speak()
