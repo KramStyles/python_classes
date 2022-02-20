@@ -27,6 +27,7 @@ class User:
     def sign_in(self):
         print('Logged in...')
 
+
 class Hero(User):
     def __init__(self, name, guns) -> None:
         self.name = name
@@ -34,6 +35,7 @@ class Hero(User):
 
     def shoot(self, bullets=1):
         print(self.name, "has shot", bullets, f"bullets with his {self.guns}.")
+
 
 class Wizard(User):
     def __init__(self, name, powers) -> None:
@@ -43,16 +45,21 @@ class Wizard(User):
     def attack(self):
         print(f"Wizard {self.name} is attacking with {self.powers}")
 
+
 class Archer(Wizard):
     def shoot(self, arrows=1):
         print(f"{self.name} has shot {arrows} arrows.")
+
 
 obj1 = BigObject()
 jnr = PlayerCharacter('Junior')
 dan = PlayerCharacter('Daniel Edem', 24)
 
+gary = Archer('Gary Meme', 'Sharp Eyes')
+
 if __name__ == '__main__':
-    print(PlayerCharacter.sub(3,4))
+    # print(PlayerCharacter.sub(3, 4))
+    print(gary.shoot(4))
 
 
 
