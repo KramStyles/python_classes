@@ -15,10 +15,46 @@ class PlayerCharacter:
     def speak(self):
         print(f"My name is {self.name} and i am {self.age} year(s) old...")
 
+    @staticmethod
+    def add(a, b):
+        return a+b
+
+    def sub(a, b):
+        return a-b
+
+
+class User:
+    def sign_in(self):
+        print('Logged in...')
+
+class Hero(User):
+    def __init__(self, name, guns) -> None:
+        self.name = name
+        self.guns = guns
+
+    def shoot(self, bullets=1):
+        print(self.name, "has shot", bullets, f"bullets with his {self.guns}.")
+
+class Wizard(User):
+    def __init__(self, name, powers) -> None:
+        self.name = name
+        self.powers = powers
+
+    def attack(self):
+        print(f"Wizard {self.name} is attacking with {self.powers}")
+
+class Archer(Wizard):
+    def shoot(self, arrows=1):
+        print(f"{self.name} has shot {arrows} arrows.")
 
 obj1 = BigObject()
 jnr = PlayerCharacter('Junior')
 dan = PlayerCharacter('Daniel Edem', 24)
 
 if __name__ == '__main__':
-    dan.speak()
+    print(PlayerCharacter.sub(3,4))
+
+
+
+# Code to activate venv
+# user@Users-MacBook-Air Classes % source /Users/user/Documents/Python/Classes/myvenv/bin/activate
