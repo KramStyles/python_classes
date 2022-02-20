@@ -50,17 +50,27 @@ class Archer(Wizard):
     def shoot(self, arrows=1):
         print(f"{self.name} has shot {arrows} arrows.")
 
+    def attack(self):
+        print(f"{self.name} is angry. He's finally attacking with his {self.powers} special abilities")
+
 
 obj1 = BigObject()
 jnr = PlayerCharacter('Junior')
 dan = PlayerCharacter('Daniel Edem', 24)
 
 gary = Archer('Gary Meme', 'Sharp Eyes')
+melv = Wizard('Melvis', 'Great Strength')
 
 if __name__ == '__main__':
     # print(PlayerCharacter.sub(3, 4))
     print(gary.shoot(4))
 
+    # With polymorphism, we can create a function that calls a method in our class
+    def attack(char):
+        char.attack()
+
+    attack(gary)
+    attack(melv)
 
 
 # Code to activate venv
